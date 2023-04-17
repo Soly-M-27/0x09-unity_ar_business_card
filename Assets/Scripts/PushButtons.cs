@@ -12,6 +12,8 @@ public class PushButtons : MonoBehaviour
     public Animator NameB;
     public Animator TitleB;
 
+    private bool animPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,32 +27,50 @@ public class PushButtons : MonoBehaviour
     //in each button.
     public void Pinterest()
     {
-        PinterestB.SetBool("trigger", true);
+        if (!animPlayed)
+        {
+            PinterestB.SetBool("trigger", true);
+            animPlayed = true;
+        }
         Application.OpenURL("https://www.pinterest.com/solymar227/");
     }
 
     public void GitHub()
     {
-        GitHubB.SetBool("trigger", true);
+        if (!animPlayed)
+        {
+            GitHubB.SetBool("trigger", true);
+            animPlayed = true;
+        }
         Application.OpenURL("https://github.com/Soly-M-27");
     }
 
     public void Twitter()
     {
-        TwitterB.SetBool("trigger", true);
+        if (!animPlayed)
+        {
+            TwitterB.SetBool("trigger", true);
+            animPlayed = true;
+        }
         Application.OpenURL("https://twitter.com/Michi_or_Skully");
     }
 
     public void Linkdn()
     {
-        LinkednB.SetBool("trigger", true);
+        if (!animPlayed)
+        {
+            LinkednB.SetBool("trigger", true);
+            animPlayed = true;
+        }
         Application.OpenURL("https://www.linkedin.com/in/solymar-sánchez-molina-094572220/");
     }
 
-    public void Name() {
-        NameB.SetBool("trigger", true);
-    }
-    public void Title() {
-        TitleB.SetBool("trigger", true);
+    public void Update() {
+        if (!animPlayed)
+        {
+            NameB.SetBool("trigger", true);
+            TitleB.SetBool("trigger", true);
+            animPlayed = true;
+        }
     }
 }
