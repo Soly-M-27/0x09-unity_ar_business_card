@@ -26,7 +26,7 @@ public class PushButtons : MonoBehaviour
     //methods. Add Audio source in each button and quickly access the component
     //in each button.
     public void Pinterest()
-    {
+    { /*None of it works*/
         if (!animPlayed)
         {
             PinterestB.SetBool("trigger", true);
@@ -66,11 +66,14 @@ public class PushButtons : MonoBehaviour
     }
 
     public void Update() {
+        /*Nope*/
         if (!animPlayed)
         {
             NameB.SetBool("trigger", true);
             TitleB.SetBool("trigger", true);
             animPlayed = true;
         }
+        NameB.SetBool("trigger", false);
+        TitleB.SetBool("trigger", false);
     }
 }
