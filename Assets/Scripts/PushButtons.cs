@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class PushButtons : MonoBehaviour
 {
+    
+    private Animator PinterestB;
+    private Animator GitHubB;
+    private Animator TwitterB;
+    private Animator LinkednB;
+    private Animator NameB;
+    private Animator TitleB;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        PinterestB = GetComponent<PinterestA>();     
     }
 
     //Add Button Component to any GameObject you used as the button icon. 
     //Once this script is added into each button as a coponent as well, it
     //will communicate the methods according to the button components available
-    //methods. Add Audio source in each button and quickly acces the component
+    //methods. Add Audio source in each button and quickly access the component
     //in each button.
     public void Pinterest()
     {
